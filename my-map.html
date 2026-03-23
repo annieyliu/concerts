@@ -31,7 +31,7 @@
   // Set up initial map center and zoom level
   var map = L.map('map', {
     center: [41.3652672,-74.0539449], // EDIT latitude, longitude to re-center map
-    zoom: 12,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
+    zoom: 8,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
     scrollWheelZoom: true,
     tap: false
   });
@@ -63,7 +63,7 @@
 
       var marker = L.marker([row.Latitude, row.Longitude], {
         opacity: 1
-      }).bindPopup("<b>Concert:</b>" + row.Concert + "</br>" + "<b>Ensemble:</b>" + row.Ensembles + "</br>" + "<b>Venue:</b>" + row.Location + "</br>" + "<b>Location:</b>" + row.Town + row.State + "</br>" + "<b>Date:</b>" + row.Date + "</br>" + "<b>Time:</b>" + row.Time);
+      }).bindPopup("<b>Concert: </b>" + row.Concert + "</br>" + "<b>Ensemble: </b>" + row.Ensembles + "</br>" + "<b>Venue: </b>" + row.Location + "</br>" + "<b>Location: </b>" + row.Town + row.State + "</br>" + "<b>Date: </b>" + row.Date + "</br>" + "<b>Time: </b>" + row.Time);
       
       marker.addTo(map);
     }
