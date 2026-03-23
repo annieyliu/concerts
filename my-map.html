@@ -63,7 +63,7 @@
 
       var marker = L.marker([row.Latitude, row.Longitude], {
         opacity: 1
-      }).bindPopup("<b>Concert: </b>" + row.Concert + "</br>" + "<b>Ensemble: </b>" + row.Ensembles + "</br>" + "<b>Venue: </b>" + row.Location + "</br>" + "<b>Location: </b>" + row.Town + "<b>, </b>" row.State + "</br>" + "<b>Date: </b>" + row.Date + "</br>" + "<b>Time: </b>" + row.Time);
+      }).bindPopup("<b>Concert: </b>" + row.Concert + "</br>" + "<b>Ensemble: </b>" + row.Ensembles + "</br>" + "<b>Venue: </b>" + row.Location + "</br>" + "<b>Location: </b>" + row.Town + "<p>, </p>" + row.State + "</br>" + "<b>Date: </b>" + row.Date + "</br>" + "<b>Time: </b>" + row.Time);
       
       marker.addTo(map);
     }
