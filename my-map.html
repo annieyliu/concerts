@@ -30,8 +30,8 @@
 
   // Set up initial map center and zoom level
   var map = L.map('map', {
-    center: [37.975154008667445, 23.72306956553732], // EDIT latitude, longitude to re-center map
-    zoom: 16,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
+    center: [41.3652672,-74.0539449], // EDIT latitude, longitude to re-center map
+    zoom: 12,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
     scrollWheelZoom: true,
     tap: false
   });
@@ -48,12 +48,6 @@
   }).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
   controlLayers.addBaseLayer(light, 'Carto Light basemap');
 
-  /* Messinesi basemap tiles with labels */
-  var messinesi = L.tileLayer('https://mapwarper.net/maps/tile/93674/{z}/{x}/{y}.png', {
-    attribution: 'Map tiles by <a href="https://mapwarper.net">MapWarper</a>'
-  }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-  controlLayers.addBaseLayer(messinesi, 'Messinesi map');
-
   // see more basemap options at https://leaflet-extras.github.io/leaflet-providers/preview/
 
   // Read markers data from data.csv
@@ -69,7 +63,7 @@
 
       var marker = L.marker([row.Latitude, row.Longitude], {
         opacity: 1
-      }).bindPopup("<b>Item Number:</b>" + row.Title + "</br>" + "<b>Section:</b>" + row.Section + "</br>" + "<b>Description:</b>" + row.Description + "</br>" + "<b>Lot:</b>" + row.Lot + "</br>" + row.Photo);
+      }).bindPopup("<b>Concert:</b>" + row.Concert + "</br>" + "<b>Ensemble:</b>" + row.Ensembles + "</br>" + "<b>Venue:</b>" + row.Location + "</br>" + "<b>Location:</b>" + row.Town + row.State + "</br>" + "<b>Date:</b>" + row.Date + "</br>" + "<b>Time:</b>" + row.Time);
       
       marker.addTo(map);
     }
